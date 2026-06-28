@@ -1,87 +1,395 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Personal Site</title>
-  </head>
-  <body>
-    <table cellspacing="10">
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Abdul Ali Nawrozie | Cloud & AI Engineer</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #334155;
+      background-color: #f8fafc;
+      line-height: 1.6;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+
+    h1 {
+      font-size: 2.25rem;
+      color: #0f172a;
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    h2, h3 {
+      color: #1e293b;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .header-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    .header-info-cell {
+      vertical-align: middle;
+      padding-left: 20px;
+    }
+
+    .profile-pic {
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #e2e8f0;
+    }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #475569;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    .contact-links {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-top: 0.5rem;
+    }
+
+    .contact-links a {
+      margin-right: 15px;
+    }
+
+    .summary {
+      font-size: 1.05rem;
+      color: #475569;
+      text-align: justify;
+      margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skills-category {
+      background: #f8fafc;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #f1f5f9;
+    }
+
+    .skills-category h4 {
+      margin: 0 0 0.75rem 0;
+      color: #0f172a;
+      font-size: 1.05rem;
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 6px;
+    }
+
+    .skills-category ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .skills-category li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .project-card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+    }
+
+    .project-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #0f172a;
+      margin-bottom: 0.25rem;
+    }
+
+    .project-meta {
+      font-size: 0.85rem;
+      color: #2563eb;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .project-card ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .project-card li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .experience-item {
+      margin-bottom: 2rem;
+    }
+
+    .experience-header {
+      font-weight: bold;
+      color: #0f172a;
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .experience-meta {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 0.75rem;
+    }
+
+    .experience-item ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .experience-item li {
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+    }
+
+    .cert-item {
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .cert-meta {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .edu-item {
+      font-weight: bold;
+      color: #0f172a;
+    }
+
+    .edu-meta {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .contact-cta {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .contact-cta a {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 600px) {
+      .header-table tr {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .header-info-cell {
+        padding-left: 0;
+        margin-top: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <table class="header-table">
       <tr>
-        <td><img src="images/profile.png" alt="Ali Profile Picture!" height="150px" width="150px"></td>
-        <td>
+        <td style="width: 150px;">
+          <img class="profile-pic" src="images/profile.png" alt="Abdul Ali Nawrozie Picture" height="150" width="150">
+        </td>
+        <td class="header-info-cell">
           <h1>Abdul Ali Nawrozie</h1>
-          <p><em>PHP Developer at <strong><a href="http://richlabz.com/">RICHLABZ IT SOLUTION</a></strong>.</em></p>
-          <p>I am a Web Developer, I love Football and Travelling. </p>
+          <div class="subtitle">Cloud & AI Engineer | AWS-Certified Solutions Architect</div>
+          <div class="contact-links">
+            <a href="https://linkedin.com/in/ali-nawrozie" target="_blank">LinkedIn</a>
+            <a href="http://nawrozie.com" target="_blank">nawrozie.com</a>
+          </div>
         </td>
       </tr>
     </table>
-    <hr>
-    <h3>Education</h3>
-    <ul>
+
+    <!-- Professional Summary -->
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      AWS-Certified Solutions Architect and Cloud & AI Engineer with an MSc in Artificial Intelligence and a strong foundation in full-stack web development. Proven capability in designing automated cloud infrastructure, building end-to-end ML/DL pipelines, and deploying scalable, production-grade applications. Expert in eliminating manual workflows by implementing GitOps, CI/CD pipelines, and Infrastructure as Code (Terraform).
+    </p>
+
+    <!-- Core Technical Skills -->
+    <h2>Core Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skills-category">
+        <h4>Cloud Infrastructure & DevOps</h4>
+        <ul>
+          <li><strong>AWS:</strong> EC2, VPC, S3, CloudFront, Route 53, API Gateway, Lambda, SES, IAM</li>
+          <li><strong>DevOps / IaC:</strong> Terraform, GitHub Actions (CI/CD)</li>
+          <li><strong>OS:</strong> Linux</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Machine Learning & AI</h4>
+        <ul>
+          <li><strong>ML / DL:</strong> TensorFlow, Keras, Deep Learning, Computer Vision, Time-Series Forecasting</li>
+          <li><strong>Platforms:</strong> Amazon SageMaker</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Languages & Frameworks</h4>
+        <ul>
+          <li><strong>Languages:</strong> Python (Advanced), PHP, SQL, C/C++</li>
+          <li><strong>Frameworks:</strong> Laravel, CodeIgniter</li>
+        </ul>
+      </div>
+
+      <div class="skills-category">
+        <h4>Engineering Disciplines</h4>
+        <ul>
+          <li>REST API Design</li>
+          <li>Relational Databases (Oracle, MySQL)</li>
+          <li>Data Structures & Algorithms</li>
+          <li>DRY Principles & Clean Code</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Featured Technical Projects -->
+    <h2>Featured Technical Projects</h2>
+
+    <div class="project-card">
+      <div class="project-title">Production-Grade Serverless Cloud Architecture (Portfolio Platform)</div>
+      <div class="project-meta">AWS, Terraform, GitHub Actions</div>
+      <ul>
+        <li>Designed and engineered a high-availability, statically hosted cloud architecture on AWS using S3, CloudFront, and Route 53 for globally optimized web delivery.</li>
+        <li>Built a fully serverless backend contact form processing flow leveraging API Gateway, AWS Lambda, and SES.</li>
+        <li>Eliminated AWS console clicking entirely by defining 100% of the architecture as code (IaC) using Terraform, enabling seamless tracking and automated GitOps workflows via GitHub Actions CI/CD.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Computer Vision Skin Cancer Classification Pipeline</div>
+      <div class="project-meta">Python, TensorFlow, Keras</div>
+      <ul>
+        <li>Developed an end-to-end deep learning image classification pipeline featuring a variety of CNN architectures (VGG16, EfficientNet) and Vision Transformers (ViT-B16).</li>
+        <li>Mitigated over-fitting and expanded baseline training datasets by integrating advanced image augmentation workflows (rotation, shear, zoom, shift).</li>
+        <li>Validated performance using Stratified K-Fold cross-validation, achieving an ROC-AUC of 0.844 and a Weighted Average score of 0.88.</li>
+      </ul>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Time-Series Retail Sales Predictor</div>
+      <div class="project-meta">Python, TensorFlow, LSTM</div>
+      <ul>
+        <li>Built an LSTM-based recurrent neural network architecture optimized with dropout regularization to extract complex temporal dependencies across 1,115 retail store timelines.</li>
+        <li>Successfully projected 6 weeks of future daily store sales, achieving a highly accurate RMPSE of 0.103 on unseen data points.</li>
+      </ul>
+    </div>
+
+    <!-- Professional Experience -->
+    <h2>Professional & Volunteer Experience</h2>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="experience-role">Web Developer</span> | Richlabz IT Solutions, India
+      </div>
+      <div class="experience-meta">August 2020 – February 2022</div>
+      <ul>
+        <li>Architected and optimized core business logic for enterprise web applications using PHP/Laravel, significantly improving application performance and reliability.</li>
+        <li>Engineered and integrated complex, third-party REST APIs to facilitate data exchange and extend application capabilities.</li>
+        <li>Created modular, reusable backend components utilized across web and mobile platforms, improving overall code maintainability by 40%.</li>
+        <li>Mentored 4 junior engineers on clean code architecture, RESTful API design, and strict adherence to DRY (Don't Repeat Yourself) development practices.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="experience-role">Educational Mentor (Volunteer)</span> | Refugee Education UK (REUK), London
+      </div>
+      <div class="experience-meta">January 2026 – Present</div>
+      <ul>
+        <li>Deliver weekly 1-to-1 academic mentoring to young learners, mapping personalized learning pathways to ensure academic growth and GCSE exam readiness.</li>
+        <li>Collaborated closely with internal coordination teams to maintain session logs, evaluate milestones, and safeguard student welfare.</li>
+      </ul>
+    </div>
+
+    <!-- Certifications -->
+    <h2>Certifications</h2>
+    <ul class="education-list">
       <li>
-        <strong>Computer Science</strong> <br>
-        <a href="https://www.osmania.ac.in/">Osmania University</a> -2020, Hyderabad, Telangana, India
+        <span class="cert-item">AWS Certified Solutions Architect – Associate</span> <br>
+        <span class="cert-meta">Amazon Web Services | Issued June 2026</span>
+      </li>
+      <li>
+        <span class="cert-item">AWS Certified Cloud Practitioner</span> <br>
+        <span class="cert-meta">Amazon Web Services | Issued November 2025</span>
+      </li>
+      <li>
+        <span class="cert-item">Programming for Everybody (Python)</span> <br>
+        <span class="cert-meta">University of Michigan (Coursera) | Issued August 2024</span>
       </li>
     </ul>
-    <hr>
-    <h3>Work Experience</h3>
-    <table cellspacing="10">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Work</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>2019-2021</td>
-          <td>Junior Web Developer at <a href="http://richlabz.com/">RICHLABZ IT SOLUTION</a>.</td>
-        </tr>
-      </tbody>
-    </table>
-    <hr>
-    <h3>Skills</h3>
-    <table border="1">
-      <tbody>
-        <tr>
-          <td>
-            <table>
-                <tr>
-                  <td>CodeIgniter</td>
-                  <td>⭐⭐⭐⭐⭐</td>
-                </tr>
-                <tr>
-                  <td>Web Development</td>
-                  <td>⭐⭐⭐⭐</td>
-                </tr>
-            </table>
-          </td>
-          <td>
-            <table>
-              <tr>
-                <td>CCNA</td>
-                <td>⭐⭐⭐⭐⭐</td>
-              </tr>
-              <tr>
-                <td>MCSE</td>
-                <td>⭐⭐⭐⭐</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <hr>
-    <h3>My Hobbies</h3>
-    <ol type="1">
-      <li>Football</li>
-      <li>Watching Movies</li>
-      <li>Travelling</li>
-    </ol>
-    <h3><a href="contact.html">Contact me</a></h3>
-  </body>
+
+    <!-- Education -->
+    <h2>Education</h2>
+    <ul class="education-list">
+      <li>
+        <span class="edu-item">MSc in Artificial Intelligence</span> <br>
+        <span class="edu-meta">University of Essex, UK | September 2023 – April 2025</span>
+      </li>
+      <li>
+        <span class="edu-item">MSc in Computer Applications</span> <br>
+        <span class="edu-meta">University of Mysore, India | February 2022 – September 2023</span>
+      </li>
+      <li>
+        <span class="edu-item">BSc in Computer Applications</span> <br>
+        <span class="edu-meta">Osmania University, India | August 2017 – August 2021</span>
+      </li>
+    </ul>
+
+    <!-- Footer Contact -->
+    <div class="contact-cta">
+      <h3><a href="contact.html">Contact Me</a></h3>
+    </div>
+  </div>
+</body>
+
 </html>
-<!--
--use <em> instead of <i>
--use <<strong> instead of <b>
--->
